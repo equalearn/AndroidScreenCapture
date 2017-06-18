@@ -1,0 +1,20 @@
+cmake_minimum_required(VERSION 3.7)
+project(myFileServer)
+
+set(CMAKE_C_STANDARD 99)
+set(i686_root /home/i686)
+
+#find_library(EVENT event PATHS /root/i686/lib NO_DEFAULT_PATH)
+find_library(EVENT event PATHS ${i686_root}/lib NO_DEFAULT_PATH)
+#message("event " "${EVENT}")
+#message("${EVENT_INCLUDE_DIR}")
+#message("${EVENT_LIBRARY_DIR}")
+INCLUDE_DIRECTORIES(${i686_root}/usr/include)
+LINK_DIRECTORIES(${i686_root}/usr/lib)
+
+set(SOURCE_FILES main.c)
+add_executable(myFileServer32 ${SOURCE_FILES})
+set_target_properties(myFileServer32 PROPERTIES COMPILE_FLAGS "-m32" LINK_FLAGS "-m32")
+target_link_libraries(myFileServer32 ${EVENT})
+#add_executable(myFileServer ${SOURCE_FILES})
+#target_link_libraries(${PROJECT_NAME} ${EVENT})

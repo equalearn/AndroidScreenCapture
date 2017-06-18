@@ -1,0 +1,7 @@
+A primitive http upload file server, listenning at 8888. For an AndroidTV that we want to upload files from it.
+
+prefer a wget client
+
+wget http://ip:port/dump --post-file=try.py --header=Filename: filename
+
+or
