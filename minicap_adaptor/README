@@ -1,0 +1,2 @@
+
+./ma 10 | ./ffmpeg -f image2pipe -vcodec mjpeg -framerate 10 -i - -preset ultrafast -tune zerolatency -y -vcodec libx264 -force_key_frames "expr:gte(t,n_forced*5)" -vf scale=960:540,format=yuv420p -f flv rtmp://120.76.76.162/live/mzya
