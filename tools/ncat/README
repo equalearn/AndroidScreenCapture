@@ -1,0 +1,9 @@
+
+edit android_configure.sh as your prefer
+
+cd nmap-7.50
+export ANDROID_NDK=/path/to/ndk_root
+PREFIX=/path/to/install_path ./android-configure.sh  --with-pcap=null --without-liblua --without-ndiff --without-nping --without-zenmap --without-nmap-update
+make build-ncat
+
+issue: c++ dep broken, so can't build nmap and install
