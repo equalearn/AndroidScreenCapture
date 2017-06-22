@@ -1,5 +1,0 @@
-set(CMAKE_SYSTEM_NAME Android)
-set(CMAKE_SYSTEM_VERSION 23) 
-set(CMAKE_ANDROID_ARCH_ABI arm64-v8a)
-set(CMAKE_ANDROID_NDK /run/media/lxy/00017F2900000380/Android/Sdk/ndk-bundle)
-set(CMAKE_ANDROID_STL_TYPE gnustl_static)
