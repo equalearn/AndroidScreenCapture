@@ -62,6 +62,6 @@ export CFLAGS="${CFLAGS} --sysroot=${SYSROOT} -I${SYSROOT}/usr/include -I${ANDRO
 export CPPFLAGS="${CFLAGS}" 
 #export LDFLAGS="${LDFLAGS} --sysroot=${SYSROOT} -pie -fPIE -L${SYSROOT}/usr/lib -L${ANDROID_PREFIX}/lib" 
 #export LDFLAGS="${LDFLAGS} --stl=stlport -L${SYSROOT}/usr/lib -L${ANDROID_PREFIX}/lib"
-export LDFLAGS="${LDFLAGS} -L${SYSROOT}/usr/lib -L${ANDROID_PREFIX}/lib"
+export LDFLAGS="${LDFLAGS} -pie -fPIE -L${SYSROOT}/usr/lib -L${ANDROID_PREFIX}/lib"
 
 ./configure --host=${COMPILE_TARGET}  --prefix=${PREFIX} "$@"
