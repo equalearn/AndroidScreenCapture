@@ -16,7 +16,12 @@ Build
 结果会拷贝到bin目录中
 
 Run
+1.常规情况，
+启动
+sh cap1.sh rtmp://120.76.76.162/live/mzya 1080 1920  >log 2>log
+停止
+sh cap2.sh stop
+2.androidTV在播放video
 
-1.常规情况
 
 
