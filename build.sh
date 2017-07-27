@@ -5,16 +5,15 @@ while getopts 'n:' OPT; do
         n)
             ndk_path="$OPTARG";;
         ?)
-            echo "Usage: `basename $0`"
+            echo "Usage: `basename $0` -n ndk_path"
     esac
 done
 
 shift $((OPTIND-1))
 
-if [ -z "$ndk_path" ]; then
-    echo haha
-    exit
-fi
+#if [ -z "$ndk_path" ]; then
+#    exit
+#fi
 
 #echo argument number $#
 api_lv=23
