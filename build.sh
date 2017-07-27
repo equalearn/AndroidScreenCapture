@@ -20,6 +20,7 @@ api_lv=23
 #abi=armeabi-v7a
 abi=arm64-v8a
 #echo $ndk_path
+export PATH=$ndk_path:$PATH
 #exit
 
 export NDK_PROJECT_PATH=minicap
