@@ -1,5 +1,21 @@
 #!/bin/bash
 
+while getopts 'n:' OPT; do
+    case $OPT in
+        n)
+            ndk_path="$OPTARG";;
+        ?)
+            echo "Usage: `basename $0`"
+    esac
+done
+
+shift $((OPTIND-1))
+
+if [ -z "$ndk_path" ]; then
+    echo haha
+    exit
+fi
+
 #echo argument number $#
 api_lv=23
 #abi=armeabi-v7a

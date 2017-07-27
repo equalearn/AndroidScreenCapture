@@ -2,19 +2,21 @@
 AndroidTV real time Screen Streaming
 
 DEP
-android ndk
-https://developer.android.com/ndk/downloads/index.html?hl=zh-cn
-https://dl.google.com/android/repository/android-ndk-r15b-linux-x86_64.zip
+    android ndk
+    https://developer.android.com/ndk/downloads/index.html?hl=zh-cn
+    https://dl.google.com/android/repository/android-ndk-r15b-linux-x86_64.zip
 
 cmake >= 3.7
+    build cmake 
+        yum groupinstall 'Development Tools'
 
 ----
 Prepare
-git submodule init
-git submodule update
-cd minicap
-git submodule init
-git submodule update
+    git submodule init
+    git submodule update
+    cd minicap
+    git submodule init
+    git submodule update
 
 ----
 Build
