@@ -1,6 +1,14 @@
 
-AndroidTV实时录屏并推流
+AndroidTV real time Screen Streaming
 
+DEP
+android ndk
+https://developer.android.com/ndk/downloads/index.html?hl=zh-cn
+https://dl.google.com/android/repository/android-ndk-r15b-linux-x86_64.zip
+
+cmake >= 3.7
+
+----
 Prepare
 git submodule init
 git submodule update
@@ -8,9 +16,7 @@ cd minicap
 git submodule init
 git submodule update
 
-需要安装android ndk, 参考地址 https://developer.android.com/ndk/downloads/index.html?hl=zh-cn
-需要安装cmake
-
+----
 Build
 ./build.sh
 结果会拷贝到bin目录中
