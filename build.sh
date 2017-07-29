@@ -1,19 +1,25 @@
 #!/bin/bash
 
+usage()
+{
+    echo "Usage: `basename $0` -n ndk_path"
+}
+
 while getopts 'n:' OPT; do
     case $OPT in
         n)
             ndk_path="$OPTARG";;
         ?)
-            echo "Usage: `basename $0` -n ndk_path"
+            usage
     esac
 done
 
 shift $((OPTIND-1))
 
-#if [ -z "$ndk_path" ]; then
-#    exit
-#fi
+if [ -z "$ndk_path" ]; then
+    usage
+    exit
+fi
 
 #echo argument number $#
 api_lv=23
@@ -34,7 +40,7 @@ if [ "$?" != 0 ]; then
 fi
 
 mkdir -p bin
-rm bin/*
+#rm bin/*
 cp minicap/jni/minicap-shared/aosp/libs/android-$api_lv/$abi/minicap.so bin
 cp minicap/libs/$abi/minicap bin
 
